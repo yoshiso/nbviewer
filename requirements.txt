@@ -9,3 +9,4 @@ pycurl
 pylibmc
 tornado<6.0
 statsd
+boto3

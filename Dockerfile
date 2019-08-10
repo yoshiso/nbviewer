@@ -52,8 +52,6 @@ COPY ./nbviewer/static/less /srv/nbviewer/nbviewer/static/less/
 COPY ./tasks.py /srv/nbviewer/
 RUN invoke less
 
-RUN conda install boto3
-
 # Remove build-only packages so that we can copy a clean conda environment
 # to the runtime image. Need to leave git intact: it's a runtime dep!
 RUN conda remove -y nodejs invoke && \
